@@ -1,0 +1,35 @@
+version: 0
+
+
+domains:
+  engineering:
+    description: Pantalasa engineering
+    owner: johnsmith@example.com
+
+
+components: {}
+  # github.com/pantalasa-cronos/backend:
+  #   owner: johnsmith@example.com
+  #   domain: engineering
+  #   branch: "main"
+  #   tags: []
+
+
+collectors:
+  - uses: ./collectors/readme
+    on: ["domain:engineering"]
+
+
+initiatives:
+  - name: repo-standards
+    description: Repository-related standards
+    owner: johnsmith@example.com
+    on: ["domain:engineering"]
+
+
+policies:
+  - uses: ./policies/readme
+    name: readme
+    description: README best practices
+    initiative: standardization
+    enforcement: draft
