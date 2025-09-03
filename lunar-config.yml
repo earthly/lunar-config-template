@@ -3,12 +3,12 @@ version: 0
 
 domains:
   engineering:
-    description: Pantalasa engineering
+    description: Engineering organization
     owner: johnsmith@example.com
 
 
 components: {}
-  # github.com/pantalasa-cronos/backend:
+  # github.com/example/repo:
   #   owner: johnsmith@example.com
   #   domain: engineering
   #   branch: "main"
