@@ -11,14 +11,14 @@ jobs:
       - name: Install Lunar binary
         run: |
           curl -fsSL \
-            https://github.com/earthly/lunar-dist/releases/download/v1.0.1/lunar-linux-amd64 \
+            https://github.com/earthly/lunar-dist/releases/download/v1.0.2/lunar-linux-amd64 \
             -o /usr/local/bin/lunar
           chmod +x /usr/local/bin/lunar
       - name: Pull policy
         env:
-          LUNAR_HUB_TOKEN: ${{ secrets.LUNAR_HUB_TOKEN }}
-          LUNAR_HUB_HOST: example.demo.earthly.dev
+          LUNAR_HUB_TOKEN: ${{ secrets.LUNAR_HUB_TOKEN }} # TODO: Create this secret in your repo.
+          LUNAR_HUB_HOST: example.demo.earthly.dev # TODO: Change to the actual host.
           LUNAR_HUB_GRPC_PORT: 443
           LUNAR_HUB_HTTP_PORT: 443
         run: |
-          lunar hub pull -r github://example/lunar@main
+          lunar hub pull -r github://example/lunar@main # TODO: Change to the actual repo.
