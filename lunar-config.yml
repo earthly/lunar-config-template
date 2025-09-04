@@ -31,5 +31,5 @@ policies:
   - uses: ./policies/readme
     name: readme
     description: README best practices
-    initiative: standardization
+    initiative: repo-standards
     enforcement: draft
