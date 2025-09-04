@@ -11,7 +11,6 @@ components: {}
   # github.com/example/repo:
   #   owner: johnsmith@example.com
   #   domain: engineering
-  #   branch: "main"
   #   tags: []
 
 
