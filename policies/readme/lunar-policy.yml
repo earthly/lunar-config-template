@@ -1,8 +1,12 @@
 version: 0
 
-name: README
+name: readme
 description: Readme best practices
 author: support@earthly.dev
 
+default_image: earthly/lunar-scripts:main
+
 policies:
-  - mainPython: ./main.py
+  - name: readme-exists
+    description: README.md file should exist
+    mainPython: ./main.py

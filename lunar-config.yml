@@ -1,6 +1,13 @@
 version: 0
 
 
+# TODO: Change to the actual host.
+hub:
+  host: example.demo.earthly.dev
+  grpcPort: 443
+  httpPort: 443
+
+
 domains:
   engineering:
     description: Engineering organization
@@ -16,6 +23,7 @@ components: {}
 
 collectors:
   - uses: ./collectors/readme
+    name: readme
     on: ["domain:engineering"]
 
 
