@@ -1,5 +1,11 @@
 version: 0
 
+name: readme
+description: Collect README information
+author: support@earthly.dev
+
+default_image: earthly/lunar-scripts:main
+
 collectors:
   - name: readme
     description: Collect README information
