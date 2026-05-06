@@ -16,7 +16,7 @@ jobs:
     - name: Sync Lunar config
       uses: earthly/lunar-actions/sync-config@main
       with:
-        lunar-version: v1.0.11
+        lunar-version: v1.1.1
         manifest-url: github://${{ github.repository }}@main
         hub-token: ${{ secrets.LUNAR_HUB_TOKEN }}
         hub-host: ${{ steps.config.outputs.hub_host }}
