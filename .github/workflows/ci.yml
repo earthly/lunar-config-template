@@ -14,9 +14,9 @@ jobs:
         hub_host=$(grep -A1 '^hub:' lunar-config.yml | grep 'host:' | awk '{print $2}')
         echo "hub_host=$hub_host" >> $GITHUB_OUTPUT
     - name: Sync Lunar config
-      uses: earthly/lunar-actions/sync-manifest@main
+      uses: earthly/lunar-actions/sync-config@main
       with:
-        lunar-version: v1.0.10
+        lunar-version: v1.1.2
         manifest-url: github://${{ github.repository }}@main
         hub-token: ${{ secrets.LUNAR_HUB_TOKEN }}
         hub-host: ${{ steps.config.outputs.hub_host }}
